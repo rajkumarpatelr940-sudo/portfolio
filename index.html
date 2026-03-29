@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kamal Patel | AI Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:linear-gradient(135deg,#0f172a,#020617);
+  color:#fff;
+  scroll-behavior:smooth
+}
+
+#particles-js{position:fixed;width:100%;height:100%;z-index:-1}
+
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 50px;
+  background:rgba(2,6,23,0.7);
+  backdrop-filter:blur(10px);
+  position:sticky;top:0;z-index:1000
+}
+
+nav a{
+  margin:0 10px;
+  color:#94a3b8;
+  text-decoration:none;
+  transition:0.3s
+}
+nav a:hover{color:#22d3ee}
+
+.hero{
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center
+}
+
+.hero h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#22d3ee,#38bdf8,#6366f1);
+  -webkit-background-clip:text;
+  color:transparent
+}
+
+.typing{color:#22d3ee;font-weight:600}
+
+.btn{
+  padding:12px 25px;
+  background:linear-gradient(90deg,#22d3ee,#6366f1);
+  color:#000;
+  border-radius:30px;
+  margin-top:20px;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s
+}
+.btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 20px #22d3ee
+}
+
+section{padding:60px 20px;max-width:1000px;margin:auto}
+
+h2{
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#22d3ee,#6366f1);
+  -webkit-background-clip:text;
+  color:transparent
+}
+
+.skills span{
+  background:rgba(30,41,59,0.6);
+  padding:10px 18px;
+  margin:5px;
+  display:inline-block;
+  border-radius:30px;
+  border:1px solid #22d3ee
+}
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px
+}
+
+.project{
+  background:rgba(30,41,59,0.6);
+  padding:20px;
+  border-radius:15px;
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+  border:1px solid rgba(34,211,238,0.3)
+}
+
+.project img{width:100%;border-radius:10px}
+
+.project:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 25px #22d3ee
+}
+
+.contact-form input,.contact-form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+  background:#020617;
+  color:#fff;
+  border:1px solid #22d3ee
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#020617
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<header>
+<h2>Kamal Patel</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero">
+<h1>Hello, I'm Kamal Patel</h1>
+<p class="typing" id="typing"></p>
+<a href="resume.pdf" class="btn" download>Download Resume</a>
+</div>
+
+<section id="about" data-aos="fade-up">
+<h2>About Me</h2>
+<p>
+I am a dedicated Computer Science student with a strong passion for Machine Learning, Data Structures, and problem-solving. I enjoy building intelligent systems that solve real-world problems and continuously strive to improve my technical skills.
+
+I have hands-on experience in developing projects like House Price Prediction using machine learning techniques and have solved 60+ problems on LeetCode.
+
+I am always eager to learn new technologies and contribute to impactful solutions.
+</p>
+</section>
+
+<section id="skills" data-aos="fade-up">
+<h2>Skills</h2>
+<div class="skills">
+<span>Java</span>
+<span>Python</span>
+<span>Machine Learning</span>
+<span>DSA</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>GitHub</span>
+</div>
+</section>
+
+<section id="projects" data-aos="fade-up">
+<h2>Projects</h2>
+
+<div class="projects">
+<div class="project">
+<img src="images/project1.png">
+<h3>House Price Prediction</h3>
+<p>ML model with high accuracy using Linear Regression.</p>
+<a href="https://github.com/yourusername" class="btn">GitHub</a>
+</div>
+
+<div class="project">
+<img src="images/project2.png">
+<h3>AI Prediction System</h3>
+<p>Real-time intelligent system using ML algorithms.</p>
+<a href="https://github.com/yourusername" class="btn">GitHub</a>
+</div>
+</div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+<h2>Contact</h2>
+<form class="contact-form" onsubmit="sendMessage(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+<button class="btn">Send</button>
+</form>
+
+<p>Email: kamalp9409@email.com</p>
+<p>GitHub: https://github.com</p>
+<p>LinkedIn: https://linkedin.com/in/</p>
+
+<p id="msg"></p>
+</section>
+
+<footer>
+<p>© 2026 Kamal Patel</p>
+</footer>
+
+<script>
+AOS.init();
+
+const texts=["ML Engineer","AI Developer","Problem Solver"];
+let i=0,j=0,current="";
+function type(){
+ if(j<texts[i].length){
+  current+=texts[i][j];
+  document.getElementById("typing").innerText=current;
+  j++;setTimeout(type,100);
+ }else{
+  setTimeout(()=>{current="";j=0;i=(i+1)%texts.length;type();},1000);
+ }
+}
+type();
+
+function sendMessage(e){
+ e.preventDefault();
+ document.getElementById("msg").innerText="Message Sent!";
+}
+
+particlesJS("particles-js",{particles:{number:{value:80},size:{value:3},move:{speed:2}}});
+</script>
+
+</body>
+</html>
